@@ -1,4 +1,10 @@
-/* ===== Reset & base ===== */
+/* ===== CHANGE BACKGROUNDS: --bg-page1 (first page) and --bg-page2 (second page) ===== */
+:root {
+  --bg-page1: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e8e4df' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #e8e4df 0%, #d4cfc7 50%, #c9c4bb 100%);
+  --bg-page2: linear-gradient(160deg, #e8e4df 0%, #d4cfc7 40%, #c9c4bb 100%);
+}
+:root { --bg-page1-size: 32px 32px, 100% 100%; }
+
 *, *::before, *::after { box-sizing: border-box; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body {
@@ -17,9 +23,8 @@ body {
 .page-backdrop {
   position: fixed;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e8e4df' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(135deg, #e8e4df 0%, #d4cfc7 50%, #c9c4bb 100%);
-  background-size: 32px 32px, 100% 100%;
+  background: var(--bg-page1);
+  background-size: var(--bg-page1-size);
   z-index: 0;
 }
 
@@ -63,7 +68,7 @@ body {
 .card__submit:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.35); }
 
 .download-page .page-backdrop {
-  background: linear-gradient(160deg, #e8e4df 0%, #d4cfc7 40%, #c9c4bb 100%);
+  background: var(--bg-page2);
   background-size: 100% 100%;
 }
 .card--download { max-width: 480px; text-align: center; }
