@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="download-page">
+  <div class="page-backdrop"></div>
+  <main class="card card--download" id="download-card">
+    <header class="card__header">
+      <img src="assets/logo.png" alt="" class="card__logo" width="64" height="64">
+      <h1 class="card__title">Your invitation is ready</h1>
+    </header>
+    <div id="redirect-notice" class="redirect-notice" style="display: none;">
+      Please <a href="index.html">enter your name</a> on the previous page to access your invitation.
+    </div>
+    <div id="download-content">
+    <p class="card__intro" id="intro-text">
+      Thank you, <span class="guest-name">Guest</span>. Your invitation will download automatically. If it doesn't start, use the link below.
+    </p>
+    <div class="download-badge" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span>Secure download — no sign-up required</span>
+    </div>
+    <button type="button" class="download-btn" id="download-btn">Download invitation</button>
+    <p class="download-manual-hint">
+      If the download didn't start, <a href="#" id="download-manual">download manually</a>.
+    </p>
+    <p class="safety-note">
+      <strong>Your download is safe.</strong> This file is provided by us for your invitation only. We never ask for your password or extra downloads. If anything looks unexpected, close the file and contact us.
+    </p>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
